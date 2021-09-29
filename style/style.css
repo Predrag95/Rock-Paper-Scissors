@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+img:hover {
+  box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+  cursor: pointer;
+
+  animation: imgDance 1s infinite;
+}
+
+#game_container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+}
+
+h2{
+  font-family: 'Black Han Sans', sans-serif;
+  color: red;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
+
+#game{
+  padding: 150px 20px;
+  width: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*-----Animation-----*/
+@keyframes imgDance {
+  0%{transform: scale(0.9);}
+  100%{transform: scale(1);}
+}
+
+@keyframes textDance {
+  0%{transform: translateX(0px);}
+  30%{transform: translateX(-10px);}
+  70%{transform: translateX(10px);}
+  0%{transform: translateX(0px);}
+}
+
+.textDance {
+  animation: textDance 1s infinite;
+}
